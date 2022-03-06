@@ -32,7 +32,7 @@
 &kp TAB      &kp Q   &kp W   &kp E   &kp R   &kp T                      &kp Y   &kp U   &kp I      &kp O    &kp P        &kp SE_AA
 &kp LSHFT    &kp A   &kp S   &kp D   &kp F   &kp G                      &kp H   &kp J   &kp K      &kp L    &kp SE_OE    &kp SE_AE
 &kp LCTRL    &kp Z   &kp X   &kp C   &kp V   &kp B   &trans   &kp BSPC  &kp N   &kp M   &kp COMMA  &kp DOT  &kp SE_MINS  &kp SE_APOS
-                      &sl RAISE  &kp LGUI  &kp LALT  &kp ESC  &lt RAISE RET  &kp SPACE  &kp RALT  &sl LOWER
+                        &kp DEL  &kp LGUI  &kp LALT  &kp ESC  &lt RAISE RET  &kp SPACE  &kp RALT  &sl LOWER
 			>;
 
 			sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>;
@@ -59,14 +59,14 @@
 		raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  | BT3  | BT4  | BT5  |                   |      |   7   |   8   |  9   |       | EPON  |
-// |       |      | UP   |      |      |      |                   |      |   4   |   5   |  6   |       | EPOFF |
-// |       | LEFT | DOWN | RGHT |      |      |                   |  0   |   1   |   2   |  3   |       | EPTOG |
+// |       |      |      | UP   |      |      |                   |      |   4   |   5   |  6   |       | EPOFF |
+// |       |      | LEFT | DOWN | RIGHT|      |                   |  0   |   1   |   2   |  3   |       | EPTOG |
 // | F1    | F2   | F3   | F4   | F5   | F6   |        |  |       |  F7  |   F8  |   F9  |  F10 | F11   | F12   |
 //                       |      |      |      |        |  |       |      |       |       |
 			bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &kp N7  &kp N8  &kp N9   &trans   &ext_power EP_ON
-&trans      &trans        &kp UP        &trans        &trans        &trans                        &trans  &kp N4  &kp N5  &kp N6   &kp N0   &ext_power EP_OFF
-&kp F1      &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans                        &kp N0  &kp N1  &kp N2  &kp N3   &trans   &ext_power EP_TOG
+&trans      &trans        &kp UP        &kp UP        &trans        &trans                        &trans  &kp N4  &kp N5  &kp N6   &kp N0   &ext_power EP_OFF
+&kp F1      &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans                        &kp N0  &kp N1  &kp N2  &kp N3   &trans   &ext_power EP_TOG
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
                                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 			>;
