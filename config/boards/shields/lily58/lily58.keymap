@@ -12,6 +12,10 @@
 // Key mappings are according to Swedish layout
 #include "swedish-keymap.h"
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -28,7 +32,7 @@
 &kp TAB      &kp Q   &kp W   &kp E   &kp R   &kp T                      &kp Y   &kp U   &kp I      &kp O    &kp P        &kp SE_AA
 &kp LSHFT    &kp A   &kp S   &kp D   &kp F   &kp G                      &kp H   &kp J   &kp K      &kp L    &kp SE_OE    &kp SE_AE
 &kp LCTRL    &kp Z   &kp X   &kp C   &kp V   &kp B   &trans   &kp BSPC  &kp N   &kp M   &kp COMMA  &kp DOT  &kp SE_MINS  &kp SE_APOS
-                          &sl 2  &kp LALT  &kp LGUI  &kp ESC  &kp RET  &kp SPACE  &kp RALT  &sl 1
+                      &sl RAISE  &kp LGUI  &kp LALT  &kp ESC  &lt RAISE RET  &kp SPACE  &kp RALT  &sl LOWER
 			>;
 
 			sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>;
